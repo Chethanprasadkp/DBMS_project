@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/')
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+body {
+	background: #d3d3d3;
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+}
+nav{
+	position: fixed;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	/*background: linear-gradient(-135deg, #C850C0, #4158D0);*/
+	/*background: linear-gradient(-45deg,#23A605,#2305AB);*/
+	background: linear-gradient(-135deg,#F150C0,#413FD0);
+	transition: all .5s ease;
+}
+.logo{
+	width: 250px;
+	height: auto;	
+	user-select: none;
+}
+nav ul{
+	padding: 0;
+	margin: 0;
+	margin-left: 20px;
+}
+nav ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 65px;
+	position: relative;
+}
+nav ul li a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+nav ul li a:hover{
+	padding: 8px 20px;
+	background: #243342;
+}
+nav ul ul{
+	position: relative;
+	display: none;
+	font-family: 'Roboto',sans-serif;
+}
+nav ul li:hover > ul{
+	display: inline-block;
+}
+nav ul ul li{
+	width: 165px;
+	float: none;
+	color: white;
+	position: relative;
+}
+#check{
+	display: none;
+}
+label #btn,label #cancel{
+	position: absolute;
+	cursor: pointer;
+	background: linear-gradient(-135deg,#F150C0,#413FD0);
+	/*background: linear-gradient(-45deg,#23A605,#2305AB);*/
+	border-radius: 3px;
+}
+label #btn{
+	left: 40px;
+	top: 10px;
+	font-size: 35px;
+	background: linear-gradient(-135deg,#F150C0,#413FD0);
+	/*background: linear-gradient(-45deg,#23A605,#2305AB);*/
+	color: white;
+	padding: 6px 12px;
+	transition: all .5s ;
+}
+label #cancel{
+	z-index: 1111;
+	left: -305px;
+	top: 22px;
+	font-size: 20px;
+	color: white;/*background: linear-gradient(-45deg,#EE7752,#E73C7E);*/
+	padding: 4px 8px;
+	transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+	left: 0;
+}
+#check:checked ~ label #btn{
+	left: 250px;
+	opacity: 0;
+	pointer-events: none;
+}
+#check:checked ~ label #cancel{
+	left: 195px;
+}
+#check:checked ~ .wrapper{
+  margin-left: 500px;
+}
+.topbar{
+	margin: 0 auto;
+}
+#nav{
+	height: 70px;
+	background: linear-gradient(-45deg, #23A605,#2305AB);
+	transition: all .5s ease;
+}
+#nav ul{
+	padding: 0;
+	margin: 0;
+	float: right;
+	margin-right: 30px;
+}
+#nav ul li{
+	position: relative;
+	list-style: none;
+	display: inline-block;
+	line-height: 70px;
+}
+#nav ul li a{
+	padding: 0 15px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+#nav ul li a:hover{
+	padding: 8px 20px;
+	color: red;
+	/*background: #243342;*/
+}
+#nav ul ul{
+	position: absolute;
+	display: none;
+	font-family: 'Roboto', sans-serif;
+}
+#nav ul li:hover > ul{
+	display: block;
+}
+#nav ul ul li{
+	width: 200px;
+	float: none;
+	line-height: 50px;
+	display: list-item;
+	position: relative;
+	background-color: #23A605;
+}
+.avatar{
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.wrapper{
+  max-width: 600px;
+  width:950%;
+  height:90%;
+  background: #fff;
+  margin:20px auto;
+  border-radius: 10px;
+  box-shadow: 19px 16px 13px rgba(0,0,0,0.11);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 75px;
+  color: #fff;
+  user-select: none;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+.wrapper form{
+  padding: 10px 30px 20px 30px;
+}
+.wrapper form .field{
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+.wrapper form .field .input{
+  position: relative;
+  left: -100px;
+  height: 100%;
+  width: 50%;
+  outline: none;
+  font-size: 15px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field label{
+  width: 200px;
+  color:#757575;
+  margin-right:10px;
+  font-size:14px;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 5%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+.wrapper form .field .input:focus{
+  border:1px solid #4158d0;
+}
+.wrapper form .field .btn
+{
+  position: relative;
+  width:30%;
+  left: 190px;
+  height: 40px;
+  padding: 8px 10px;
+  font-size:20px;
+  font-weight: 500;
+  border:0;
+  background: linear-gradient(-135deg, #C850C0, #4158D0);
+  transition: all 0.3s ease;
+  color:#fff;
+  cursor:pointer;
+  border-radius:5px;
+  outline:none;
+}
+.wrapper form .field:last-child
+{
+    margin-bottom:0;
+}
+.wrapper form .field .btn:active{
+  transform: scale(0.95);
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
